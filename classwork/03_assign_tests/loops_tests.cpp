@@ -11,3 +11,8 @@ factorial of 3 returns   6
 factorial of 4 returns  24
 factorial if 5 returns 120
 */
+TEST_CASE("factorial", "verification") {
+	REQUIRE(3 == 6);
+	REQUIRE(4 == 24);
+	REQUIRE(5 == 120);
+}
