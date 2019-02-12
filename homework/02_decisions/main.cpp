@@ -53,9 +53,9 @@ int main()
 	cout << "Enter the credit hours for 3rd course: ";
 	cin >> chour3;
 
-	double points1 = get_grade_points(grade1);
-	double points2 = get_grade_points(grade2);
-	double points3 = get_grade_points(grade3);
+	double points1 = get_grade_points(grade1) * chour1;
+	double points2 = get_grade_points(grade2) * chour2;
+	double points3 = get_grade_points(grade3) * chour3;
 
 	double total_points = points1 + points2 + points3;
 	int total_hours = chour1 + chour2 + chour3;
