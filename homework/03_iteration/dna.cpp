@@ -1,3 +1,4 @@
+#include<string>
 /*
 Write code for function get_gc_content that accepts
 a const reference string parameter and returns a double.
@@ -5,12 +6,14 @@ Calculate GC content:
 Iterate string count Gs and Cs, divide count by string length.
 Return quotient.
 */
-
+int get_gc_content()
 
 /*
 Write code for function get_reverse_string that
 accepts a string parameter and returns a string reversed.
 */
+
+int get_reverse_string()
 
 
 /*
