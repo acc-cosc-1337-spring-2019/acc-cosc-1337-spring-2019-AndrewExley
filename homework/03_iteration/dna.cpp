@@ -54,13 +54,24 @@ c. return string
  std::string get_dna_complement(std::string dna)
 {	
 	std::string reverse = get_string(dna);
-	int sVar= dna.size()
 	for (auto&d : reverse)
 	{	
-		if(dna[i]=="T")
+		if (dna[i] == "T")
 		{
-			dna[i]="A"
-			
+			dna[i] = "A";
+		}
+		else if (dna[i] == "A")
+		{
+			dna[i] = "T";
+		}
+		else if (dna[i] == "C")
+		{
+			dna[i] = "G";
+		}
+		else if (dna[i] == "G")
+		{
+			dna[i] = "C";
+		}
 	}
 
 	return reverse;
