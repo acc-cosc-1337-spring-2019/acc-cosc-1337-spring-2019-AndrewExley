@@ -21,7 +21,7 @@ void loop_string_w_auto()
 	}
 }
 
-void loop_vector_w_index(std::vector<int>& values)
+void loop_vector_w_index(std::vector<int>& values);
 {
 	
 	values 
