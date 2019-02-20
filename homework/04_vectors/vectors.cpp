@@ -44,5 +44,8 @@ number is prime.
 vector<int> vector_of_primes(int integer_value)
 {
 	vector<int> primes;
-	for int(i = 1; 
+	for int(i = 1; i < number; ++i)
+	{
+		if (is prime(i))
+	}
 }
