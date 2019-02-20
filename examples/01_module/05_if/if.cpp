@@ -1,11 +1,8 @@
 //write include statement for if header
-
-//write code for the is_even function that returns true if num is even, false otherwise
 #include "if.h"
 
-//write code for function named overtime that accepts a double hours and returns true if 
-//hours over 40, false otherwise
 
+//write code for the is_even function that returns true if num is even, false otherwise
 bool is_even(int num)
 {
 	return num % 2 == 0;
@@ -13,9 +10,15 @@ bool is_even(int num)
 
 bool overtime(double hours)
 {
-	if (hours > 40)
+	if (hours > 40) 
 	{
 		return true;
 	}
-
+	
+	return false;
 }
+
+//write code for function named overtime that accepts a double hours and returns true if 
+//hours over 40, false otherwise
+
+
