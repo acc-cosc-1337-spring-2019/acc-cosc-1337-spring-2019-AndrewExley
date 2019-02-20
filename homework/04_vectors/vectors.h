@@ -1,3 +1,7 @@
+#include<iostream>
+#include<vector>
+using std::vector;
+using std::string;
 /*
 Write a value return function prototype get_max_from_vector with a 
 const reference vector of ints parameter that returns an int
@@ -6,7 +10,7 @@ const reference vector of ints parameter that returns an int
 @return the max value in the vector
 */
 
-
+int get_max_from_vector(const vector<int>&param_numbers);
 
 
 /*
@@ -16,7 +20,7 @@ thatgiven a number returns true if prime or false if not prime
 @param number: Any whole number
 @return: bool if prime False if not
 */
-
+bool is_prime(int number);
 
 
 /*
@@ -27,3 +31,4 @@ the number
 @param int integer value
 @return vector of ints containing prime values up to a value
 */
+vector<int> vector_of_primes(int integer_value);
