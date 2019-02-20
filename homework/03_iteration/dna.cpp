@@ -1,7 +1,5 @@
-#include<string>
 #include "dna.h"
 
-#include <iostream>
 
 /*
 Write code for function get_gc_content that accepts
@@ -12,7 +10,7 @@ Return quotient.
 */
 double get_gc_content(const std::string& dna)
 {
-	int count = 0;
+	double count = 0;
 	for (auto d : dna)
 	{
 		if (d == 'G' || d == 'C')
@@ -53,29 +51,26 @@ c. return string
 */
  std::string get_dna_complement(std::string dna)
 {	
-	std::string reverse = get_string(dna);
+	std::string reverse = get_reverse_string(dna);
 	for (auto&d : reverse)
 	{	
-		if (dna[i] == "T")
+		if (d == 'T')
 		{
-			dna[i] = "A";
+			d = 'A';
 		}
-		else if (dna[i] == "A")
+		else if (d == 'A')
 		{
-			dna[i] = "T";
+			d = 'T';
 		}
-		else if (dna[i] == "C")
+		else if (d == 'C')
 		{
-			dna[i] = "G";
+			d = 'G';
 		}
-		else if (dna[i] == "G")
+		else if (d == 'G')
 		{
-			dna[i] = "C";
+			d = 'C';
 		}
 	}
 
 	return reverse;
-	
-
-	return "";
 }
