@@ -3,19 +3,22 @@
 #include"vectors.h"
 
 
-}
-
 /*
 Write a test case for get_max_from_vector with values:
 vector values 3,8,1,99,1000 returns 1000
 vector values 15,12,11,99,88 returns 99
 vector values 150,120,11,990,88888 returns 88888
 */
-TEST_CASE(get_max_from_vector);
+TEST_CASE("get_max_from_vector")
 {
-REQUIRE({ {3,8,99,1000 == 1000);
-REQUIRE({ {15,12,11,99,88 == 99);
-REQUIRE({ {150,120,11,990,88888 == 88888);
+	vector<int> nums = { 3,8,99, 1000 };
+	REQUIRE(get_max_from_vector(nums) == 1000);
+	
+	nums = { 15,12,11,99,88 };
+	REQUIRE(get_max_from_vector(nums) == 99);
+
+	nums = { 150,120,11,990,88888 };
+	REQUIRE(get_max_from_vector(nums) == 88888);
 }
 /*
 Write a test case for is_prime with values:
@@ -24,12 +27,12 @@ Write a test case for is_prime with values:
 43 returns true
 44 returns false
 */
-TEST_CASE(is_prime)
+TEST_CASE("Test is_prime")
 {
-	REQUIRE(2 == true);
-	REQUIRE(4 == false);
-	REQUIRE(43 == true);
-	REQUIRE(44 == false);
+	REQUIRE(is_prime(2) == true);
+	REQUIRE(is_prime(4) == false);
+	REQUIRE(is_prime(43) == true);
+	REQUIRE(is_prime(44) == false);
 }
 /*
 Write test case for vector_of_primes here with
@@ -40,6 +43,21 @@ argument 50 return vector should have the following items:
 */
 TEST_CASE("Verify Test Configuration", "verification")
 {
-REQUIRE(2 3 5 7 == true);
-REQUIRE(2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 == true);
+	vector<int> expected = { 2,3,5,7 };
+	
+	vector<int> primes = vector_of_primes(10);
+
+	for (std::size_t i = 0; i < primes.size(); ++i)
+	{
+		REQUIRE(primes[i] == expected[i]);
+	}
+	
+	expected = { 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47 };
+	primes = vector_of_primes(50);
+
+	for (std::size_t i = 0; i < primes.size(); ++i)
+	{
+		REQUIRE(primes[i] == expected[i]);
+	}
+
 }

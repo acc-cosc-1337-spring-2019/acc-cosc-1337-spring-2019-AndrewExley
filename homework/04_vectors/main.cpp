@@ -21,27 +21,38 @@ int main()
 
 	int x;
 	int t;
-	cout << "Enter 1 for Get Max from vector or 2 for Get Primes: ";
-	cin >> x;
-	if (x == 1)
-	{
-		int max = get_max_from_vector(test_vector);
-		cout << max;
-	}
-	else if (x == 2)
-	{
-		bool is_prime(int param_number);
-		cout >> vprime;
-	}
-
-	else
-	{
-		cout << "Invalid value, continue (y/n): ";
-		cin >> t;
-	}
+	char choice;
 	do
 	{
-	} while (t == 'y' || t == 'Y');
+
+		cout << "Enter 1 for Get Max from vector or 2 for Get Primes: ";
+		cin >> x;
+		if (x == 1)
+		{
+			int max = get_max_from_vector(test_vector);
+			cout << max <<"\n";
+		}
+		else if (x == 2)
+		{
+			cout << "Enter a number: ";
+			cin >> t;
+			vector<int> primes =  vector_of_primes(t);
+
+			for (auto p : primes) 
+			{
+				cout << p << " ";
+			}
+		}
+
+		else
+		{
+			cout << "Invalid value\n";
+		}
+
+		cout << "\n Continue y: ";
+		cin >> choice;
+
+	} while (choice == 'y' || choice == 'Y');
 	
 
 	return 0;

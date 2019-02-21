@@ -38,16 +38,25 @@ given a number returns true if prime or false if not prime
 */
 bool is_prime(int number)
 {
-	int n = number;
-	if (n <= 1) 
-        return false; 
-  
-    for (int i = 2; i < n; i++) 
-        if (n % i == 0) 
-            return false; 
-  
-    return true; 
-	return is_prime;
+	if (number == 1)
+	{
+		return false;
+	}
+	else if (number == 2)
+	{
+		return true;
+	}
+	else
+	{
+		for (int i = 2; i < number; ++i)
+		{
+			if (number % i == 0)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 }
 /*
 Write a a function named vector_of_primes with an integer parameter
@@ -64,19 +73,14 @@ number is prime.
 
 vector<int> vector_of_primes(int integer_value)
 {	
-	int vprime = 0;
 	vector<int> primes;
-	if (!is_prime.empty())
-	{
-		vprime = is_prime[0];
-	}
 
-	for (int i = 1; i < is_prime.size(); i++)
+	for (int i = 1; i <= integer_value; ++i)
 	{
-		if (is_prime[i] > vprime)
+		if (is_prime(i))
 		{
-			vprime = is_prime[i];
+			primes.push_back(i);
 		}
 	}
-	return vprime;
+	return primes;
 }
