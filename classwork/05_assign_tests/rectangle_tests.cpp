@@ -14,7 +14,16 @@ Width	Height		Area
 100		10			1000
 
 */
-TEST_CASE("TESTING") 
+/*
+TEST_CASE("Test RectangleClass initialization")
 {
-	REQUIRE(return_val() == 1);
+	RectangleClass area1(4, 5);
+	RectangleClass area2(10, 10);
+	RectangleClass area3(100, 10);
+
+	REQUIRE(area1.get_area() == 20);
+	REQUIRE(area2.get_area() == 100)
+	REQUIRE(area3.get_area() == 1000)
 }
+
+*/

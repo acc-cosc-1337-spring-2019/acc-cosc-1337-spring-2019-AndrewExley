@@ -6,19 +6,16 @@ that calculates area of the rectangle.  The class has 3 int private variables ar
 */
 
 
-RectangleClass::RectangleClass(int width, int height) : W(width), H(height)
+RectangleClass::RectangleClass(int width, int height) : width(width), height(height)
 {
-	
+	calculate_area();
 }
 int RectangleClass::get_area() const
 {
-	return 0;
-}
-int get_area() const
-{
 	return area;
 }
-double RectangleClass :: calculate_area()
+
+int RectangleClass::calculate_area()
 {
 	area = width * height;
 	return area;
