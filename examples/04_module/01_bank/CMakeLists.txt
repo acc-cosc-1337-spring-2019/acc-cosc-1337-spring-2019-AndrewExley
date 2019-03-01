@@ -1,4 +1,4 @@
 add_library(sample_bank_library "bank_account.cpp" "bank_account.h" 
 								"atm.h" "atm.cpp"
-								"customer.cpp" "customer.h)
+								"customer.cpp" "customer.h")
 add_executable(sample_bank_exe "main.cpp" "bank_account.cpp" "atm.cpp")

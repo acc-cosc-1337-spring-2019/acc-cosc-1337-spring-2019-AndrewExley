@@ -77,14 +77,14 @@ else
 {
 return false;
  }
- void TicTacTie::clear_board()
+ void TicTacToe::clear_board()
  {
 	 for (auto&p : pegs)
 	 {
 		 p = " ";
 	 }
  }
- bool TicTacToe::check_board full()
+ bool TicTacToe::check_board_full()
  {
 	 for (auto p : pegs)
 	 {
@@ -95,3 +95,26 @@ return false;
 	 }
 	 return true;
  }
+
+ bool TicTacToe::no_winner()
+ {
+	 if (pegs[1] = pegs[5] && pegs[5] == pegs[7] && pegs[7] != " ")
+	 {
+		 return true;
+	 }
+	 else if (pegs[2] = pegs[3] && pegs[3] == pegs[9] && pegs[9] != " ")
+	 {
+		 return true;
+	 }
+	 else
+	 {
+		 return false;
+ }
+ bool TicTacToe::game_over()
+	 {
+		 if (check_column_win() || check_row_win() || check_diagonal_win())
+		 {
+			 return true;
+		 }
+
+		 return false;
