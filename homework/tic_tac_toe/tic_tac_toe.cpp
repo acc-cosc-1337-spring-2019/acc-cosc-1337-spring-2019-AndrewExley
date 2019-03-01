@@ -77,3 +77,21 @@ else
 {
 return false;
  }
+ void TicTacTie::clear_board()
+ {
+	 for (auto&p : pegs)
+	 {
+		 p = " ";
+	 }
+ }
+ bool TicTacToe::check_board full()
+ {
+	 for (auto p : pegs)
+	 {
+		 if (p == " ")
+		 {
+			 return false;
+		 }
+	 }
+	 return true;
+ }
