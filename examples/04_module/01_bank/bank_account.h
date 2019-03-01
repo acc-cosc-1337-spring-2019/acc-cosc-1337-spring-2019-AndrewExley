@@ -1,7 +1,9 @@
+#inddef BANK_ACCOUNT_H
+#define BANK_ACCOUNT_H
 class BankAccount 
 {
 public:
-	BankAccount(int act, double bal);//constructor
+	BankAccount(int act, double bal);// default constructor
 	double get_balance() const;
 	void deposit(double amount);
 	void withdraw(double amount);
