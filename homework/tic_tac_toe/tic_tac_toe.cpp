@@ -96,6 +96,21 @@ return false;
 	 return true;
  }
 
+ void TicTacToe::set_winner()
+ {
+	 if (check_board_full return false)
+	 {
+		 check_board_full = "C";
+
+	 else
+		 next_player;
+ }
+
+ std::string TicTacToe::get_winner()
+ {
+	 return winner;
+ }
+
  bool TicTacToe::no_winner()
  {
 	 if (pegs[1] = pegs[5] && pegs[5] == pegs[7] && pegs[7] != " ")

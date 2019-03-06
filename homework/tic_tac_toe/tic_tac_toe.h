@@ -18,6 +18,8 @@ private:
 	void set_next_player();
 	bool check_board_full();
 	bool no_winner();
+	void set_winner();
+	std::string get_winner();
 	std::string next_player;
 	std::vector<std::string> pegs{ 9," " };
 
