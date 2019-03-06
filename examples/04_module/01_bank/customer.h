@@ -1,12 +1,15 @@
-#ifdef Customer_H
-#defime Customer_H
-#include"bank_account.h"
-class Customer
+#ifndef CUSTOMER_H
+#define CUSTOMER_H
+#include "bank_account.h"
+
+class Customer 
 {
-	public
-		Customer(BankAcount act) :account(act);{}
-	double get_balance() const { return account.get balance(); }
+public:
+	Customer(BankAccount act) : account(act) {}
+	double get_balance() const { return account.get_balance(); }
 private:
 	BankAccount account;
+
 };
+
 #endif // !CUSTOMER_H

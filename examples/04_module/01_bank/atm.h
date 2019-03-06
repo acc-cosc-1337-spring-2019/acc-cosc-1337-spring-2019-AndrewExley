@@ -1,14 +1,16 @@
-#include ".h"
-#indef ATM_H
+#include "customer.h"
+
+#ifndef ATM_H
 #define ATM_H
 
-class ATM
+class ATM 
 {
-	public 
-	ATM(Customer c):customer(c){}
+public:
+	ATM(Customer c) : customer(c) {}
 	void display_balance();
-	private
-		Customer customer;
 
+private:
+	Customer customer;
 };
-#endif
+
+#endif // !ATM_H
