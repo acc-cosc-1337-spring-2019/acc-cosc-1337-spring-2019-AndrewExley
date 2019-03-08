@@ -9,10 +9,10 @@ int main()
 	std::string first;
 	char choice;
 	int position;
-	TicTacToeManager manager;
-
+	Tic_Tac_Toe_Manager manager;
+	
 	do 
-	{
+	{		
 		TicTacToe tic_tac_toe;
 		cout << "First player: ";
 		cin >> first;

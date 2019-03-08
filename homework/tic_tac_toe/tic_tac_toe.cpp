@@ -135,7 +135,7 @@ void TicTacToe::display_board() const
 	}
 }
 
-void TicTacToe::set_winner() 
+void TicTacToe:: set_winner(std::string player)
 {
 	if (check_board_full()) 
 	{

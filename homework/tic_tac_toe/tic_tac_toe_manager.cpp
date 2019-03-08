@@ -1,32 +1,37 @@
 #include "tic_tac_toe_manager.h"
 #include"tic_tac_toe.h"
-#include <iostream>
 #include <vector>
 #include <string>
 using std::cout;
 using std::cin;
 //Write class function implementations here
-void save_game(const Tic_Tac_Toe b)
+void Tic_Tac_Toe_Manager::save_game(const Tic_Tac_Toe game)
 {
-	void save_game.push_back;
+	update_winner_count(game.get_winner());
+	games.push_back(game);
 }
 
-void display_history()const
+void Tic_Tac_Toe_Manager::display_history()const
 {
 	int i;
-	for ()
+	for (auto game: games)
 	{
-		cout << "Game " << i;
-		g.display_board();
-		++i;
+		game.display_board();
+		
 	}
 }
 void update_winner_count(string winner)
 {
-	if (winner == "X")
-		x_win+1;
+	if (winner == "C")
+	{
+		x_win++;
+	}
 	else if (winner == "O")
-		o_win+1;
+	{
+		o_win++;
+	}
 	else if (winner == "C")
-		ties+1;
+	{
+		ties++;
+	}
 }
