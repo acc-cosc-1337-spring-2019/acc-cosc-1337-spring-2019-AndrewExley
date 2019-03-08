@@ -2,10 +2,9 @@
 #include"tic_tac_toe.h"
 #include <vector>
 #include <string>
-using std::cout;
-using std::cin;
+
 //Write class function implementations here
-void Tic_Tac_Toe_Manager::save_game(const Tic_Tac_Toe game)
+void Tic_Tac_Toe_Manager::save_game(const TicTacToe game)
 {
 	update_winner_count(game.get_winner());
 	games.push_back(game);
@@ -20,7 +19,7 @@ void Tic_Tac_Toe_Manager::display_history()const
 		
 	}
 }
-void update_winner_count(string winner)
+void Tic_Tac_Toe_Manager::update_winner_count(std::string winner)
 {
 	if (winner == "C")
 	{

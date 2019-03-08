@@ -1,3 +1,6 @@
+#ifndef TIC_TAC_TOE_H
+#define TIC_TAC_TOE_H
+
 #include<string>
 #include<vector>
 
@@ -23,3 +26,5 @@ private:
 	bool check_board_full();
 	void set_winner(std::string player);
 };
+
+#endif // !TIC_TAC_TOE_H
