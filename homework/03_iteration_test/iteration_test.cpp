@@ -13,6 +13,11 @@ AGCTATAG	.375
 CGCTATAG	.50
 */
 
+TEST_CASE("Test case function for get_gc_content")
+{
+	REQUIRE(AGCTATAG(.375)==true)
+	REQUIRE(CGCTATAG(.50)==true)
+}
 
 
 /*
@@ -22,7 +27,11 @@ Value	Result
 AGCTATAG	GATATCGA
 CGCTATAG	GATATCGC
 */
-
+TEST_CASE("Test case function for get_reverse_string")
+{
+	REQUIRE(AGCTATAG(GATATCGA)==true)
+	REQUIRE(CGCTATAG(GATATCGC)==true)
+}
 
 
 /*
@@ -32,3 +41,8 @@ Value	Result
 AAAACCCGGT	ACCGGGTTTT
 CCCGGAAAAT	ATTTTCCGGG
 */
+TEST_CASE("Test case function for get dna complement")
+{
+	REQUIRE(AAAACCCGGT(ACCGGGTTTT)==true)
+	REQUIRE(CCCGGAAAAT(ATTTTCCGGG)==true)
+}
