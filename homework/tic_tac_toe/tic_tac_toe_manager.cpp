@@ -34,3 +34,13 @@ void Tic_Tac_Toe_Manager::update_winner_count(std::string winner)
 		ties++;
 	}
 }
+
+std::ostream & operator<<(std::ostream & out(std::cout << pegs[i] << "|" << pegs[i + 1] << "|" << pegs[i + 2] << "\n") const Tic_Tac_Toe_Manager &b)
+{
+	// TODO: insert return statement here
+}
+
+std::istream & operator<<(std::istream & in, const Tic_Tac_Toe_Manager & b)
+{
+	// TODO: insert return statement here
+}

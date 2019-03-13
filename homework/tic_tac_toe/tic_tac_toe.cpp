@@ -146,3 +146,13 @@ void TicTacToe:: set_winner(std::string player)
 		winner = next_player;
 	}
 }
+
+std::ostream & operator<<(std::ostream & out, const TicTacToe & b)
+{
+	// TODO: insert return statement here
+}
+
+std::istream & operator<<(std::istream & in, const TicTacToe & b)
+{
+	// TODO: insert return statement here
+}

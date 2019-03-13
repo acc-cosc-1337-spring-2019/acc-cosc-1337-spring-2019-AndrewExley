@@ -9,6 +9,11 @@ class Tic_Tac_Toe_Manager
 public:
 	void save_game(const TicTacToe game);
 	void display_history()const;
+	friend std::ostream & operator << (std::ostream & out(std::cout << pegs[i] << "|" << pegs[i + 1] << "|" << pegs[i + 2] << "\n")
+		const Tic_Tac_Toe_Manager & b);
+
+	friend std::istream & operator << (std::istream & in,
+		const Tic_Tac_Toe_Manager & b);
 private:
 	std::vector<TicTacToe> games;
 	int x_win{ 0 };
