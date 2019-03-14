@@ -9,9 +9,11 @@ void TicTacToe::start_game(std::string first_player)
 
 std::string TicTacToe::get_player() const
 {
+{
 	return next_player;
 }
-
+	std::istream & operator>>(std::istream & in, TicTacToe & t)
+}
 bool TicTacToe::game_over()
 {
 	if(check_column_win() || check_row_win() || check_diagonal_win() || check_board_full())
@@ -127,12 +129,12 @@ bool TicTacToe::check_board_full()
 	return true;
 }
 
-void TicTacToe::display_board() const 
+
+
+	void TicTacToe::display_board() const
 {
-	for (std::size_t i = 0; i < 9; i += 3)
-	{
-		std::cout << pegs[i] << "|" << pegs[i + 1] << "|" << pegs[i + 2] << "\n";
-	}
+	int p = 0;
+	for (int r = 1; r <= 3; ++r)
 }
 
 void TicTacToe:: set_winner(std::string player)
