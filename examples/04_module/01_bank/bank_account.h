@@ -2,13 +2,13 @@
 #define BANK_ACCOUNT_H
 #include<iostream>
 #include<vector>
-#include
+
 
 class BankAccount
 {
 public:
 	BankAccount(int act, double bal);
-	double get_balance();
+	virtual double get_balance();
 	void deposit(double amount);
 	void deposit(int pin, double amount);
 	void withdraw(double amount);
