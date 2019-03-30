@@ -5,7 +5,7 @@
 class Customer 
 {
 public:
-	Customer(BankAccount& act) : account(act), {};
+	Customer(BankAccount& act) : account(act) {}
 	BankAccount& get_account();
 private:
 	BankAccount& account;
