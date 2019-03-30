@@ -1,64 +1,41 @@
-#include <iostream>
-#include "dna.h"
+#include<dna.h>
+#include<iostream>
+
+using std::cout; using std::cin;
+
 /*
-Write code that prompts user to enter 1 for Get GC Content,
-or 2 for Get DNA Complement.  The program will prompt user for a
+Write code that prompts user to enter 1 for Get GC Content, 
+or 2 for Get DNA Complement.  The program will prompt user for a 
 DNA string and call either get gc content or get dna complement
-function and display the result. Program runs as long as
+function and display the result. Program runs as long as 
 user enters a y or Y.
 */
-using std::cout;
-using std::cin;
-
-int main()
+int main() 
 {
+	int menu;
+	char c;
+	std::string dna;
 
-
-
-	char choice;
-	do
+	do 
 	{
+		cout << "Enter 1 for GC or 2 for DNA Complement: ";
+		cin >> menu;
+		cout << "Enter DNA string: \n";
+		cin >> dna;
 
-		std::string dnaString;
-		int Pchoice;
-		cout << "Enter a DNA string: ";
-		cin >> dnaString;
-		cout << "Enter 1 for GC Content or Enter 2 for DNA Complement: ";
-		cin >> Pchoice;
-
-		if (Pchoice == 1)
+		if (menu == 1) 
 		{
-			double gc = get_gc_content(dnaString);
-			cout << gc;
+			cout << "GC content: " << get_gc_content(dna)<<"\n";
 		}
-		else if (Pchoice == 2)
+		else 
 		{
-			std::string complement = get_dna_complement(dnaString);
-			cout << complement;
+			cout << "DNA Complement: " << get_dna_complement(dna)<<"\n";
 		}
-		else
-			cout << "Invalid Option, please try again. ";
+	
+		cout << "Continue y: ";
+		cin >> c;
 
-
-
-
-
-
-
-
-		cout << "Continue? (enter y/n): ";
-		cin >> choice;
-
-	} while (choice == 'y' || choice == 'Y');
+	} while (c == 'y' || c == 'Y');
 
 	return 0;
 }
-
-
-
-
-
-
-
-
-

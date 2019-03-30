@@ -15,15 +15,17 @@ given grade "D" returns 1
 given grade "F" returns 0
 given grade "Y" returns -1
 */
-TEST_CASE("Test case for the get_grade_points function")
+TEST_CASE("Test get grade points") 
 {
-REQUIRE(grade_points(4)==true)
-REQUIRE(grade_points(3)==true)
-REQUIRE(grade_points(2)==true)
-REQUIRE(grade_points(1)==true)
-REQUIRE(grade_points(0)==true)
-REQUIRE(grade_points(-1)==true)
+	REQUIRE(get_grade_points("A") == 4);
+	REQUIRE(get_grade_points("B") == 3);
+	REQUIRE(get_grade_points("C") == 2);
+	REQUIRE(get_grade_points("D") == 1);
+	REQUIRE(get_grade_points("F") == 0);
+	REQUIRE(get_grade_points("Y") == -1);
 }
+
+
 
 /*
 Write a Test case for function calculate_gpa with following values:
@@ -32,16 +34,10 @@ credit_hours	credit_points		gpa
 120				390					3.25
 90				180					2.00
 */
-TEST_CASE("Test case for the calculate_gpa function")
+TEST_CASE("Test calculate gpa") 
 {
-	REQUIRE(credit_hours(12)==true)
-	REQUIRE(credit_hours(120)==true)
-	REQUIRE(credit_hours(90)==true)
-	REQUIRE(credit_points(45)==true)
-	REQUIRE(credit_points(390)==true)
-	REQUIRE(credit_points(180)==true)
-	REQUIRE(gpa(3.75)==true)
-	REQUIRE(gpa(3.25)==true)
-	REQUIRE(gpa(2.0)==true)
-
+	REQUIRE(calculate_gpa(12, 45) == 3.75);
+	REQUIRE(calculate_gpa(120, 390) == 3.25);
+	REQUIRE(calculate_gpa(90, 180) == 2.0);
 }
+
