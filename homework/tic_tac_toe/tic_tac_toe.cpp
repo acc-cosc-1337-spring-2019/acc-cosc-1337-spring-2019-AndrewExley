@@ -9,15 +9,14 @@ void TicTacToe::start_game(std::string first_player)
 
 std::string TicTacToe::get_player() const
 {
-{
 	return next_player;
 }
-	std::istream & operator>>(std::istream & in, TicTacToe & t)
-}
+
 bool TicTacToe::game_over()
 {
 	if(check_column_win() || check_row_win() || check_diagonal_win() || check_board_full())
 	{
+		set_winner();
 		return true;
 	}
 
@@ -129,15 +128,12 @@ bool TicTacToe::check_board_full()
 	return true;
 }
 
-
-
-	void TicTacToe::display_board() const
+std::string TicTacToe::get_winner() const
 {
-	int p = 0;
-	for (int r = 1; r <= 3; ++r)
+	return winner;
 }
 
-void TicTacToe:: set_winner(std::string player)
+void TicTacToe::set_winner() 
 {
 	if (check_board_full()) 
 	{
@@ -149,12 +145,22 @@ void TicTacToe:: set_winner(std::string player)
 	}
 }
 
-std::ostream & operator<<(std::ostream & out, const TicTacToe & b)
+std::ostream & operator<<(std::ostream & out, const TicTacToe & t)
 {
-	// TODO: insert return statement here
+	for (std::size_t i = 0; i < 9; i += 3)
+	{
+		std::cout << t.pegs[i] << "|" << t.pegs[i + 1] << "|" << t.pegs[i + 2] << "\n";
+	}
+
+	return out;
 }
 
-std::istream & operator<<(std::istream & in, const TicTacToe & b)
+std::istream & operator>>(std::istream & in, TicTacToe & t)
 {
-	// TODO: insert return statement here
+	int position;
+	std::cout << "Enter position[1-9]: ";
+	in >> position;
+	t.mark_board(position);
+
+	return in;
 }
