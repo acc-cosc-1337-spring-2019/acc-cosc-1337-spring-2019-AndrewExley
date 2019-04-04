@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(gui_hello_world)
+#project(gui_hello_world)
 
 set(CMAKE_CXX_STANDARD 11)
 
