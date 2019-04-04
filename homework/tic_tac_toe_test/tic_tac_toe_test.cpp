@@ -194,3 +194,27 @@ TEST_CASE("Test tie", "[X wins with 3 5 7]")
 	REQUIRE(board.game_over() == true);
 	REQUIRE(board.get_winner() == "C");
 }
+TEST_CASE("Test win by first column 4", "[X wins first column]")
+
+{       
+
+       TicTacToe* board = new TicTacToe4();
+       board->start_game("X");
+       REQUIRE(board->game_over() == false);
+       board->mark_board(1);//X    
+	   REQUIRE(board->game_over() == false);
+       board->mark_board(2);//O   
+       REQUIRE(board->game_over() == false);
+       board->mark_board(5);//X         
+       REQUIRE(board->game_over() == false);
+       board->mark_board(6);//O         
+	   REQUIRE(board->game_over() == false);
+       board->mark_board(9);//X 
+       REQUIRE(board->game_over() == false);
+       board->mark_board(10);//O
+       REQUIRE(board->game_over() == false);
+	   board->mark_board(13);//X
+	   REQUIRE(board->game_over() == true);
+	   delete board;
+
+}
