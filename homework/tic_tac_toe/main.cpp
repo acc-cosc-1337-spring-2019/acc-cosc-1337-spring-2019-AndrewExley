@@ -1,34 +1,35 @@
 #include "tic_tac_toe_manager.h"
+#include "tic_tac_toe_3.h"
+#include "tic_tac_toe_4.h"
 #include <string>
 #include <iostream>
-#include"tic_tac_toe_3.h"
-#include"tic_tac_toe_4.h"
-using std::cout; 
-using std::cin;
-using std:: string;
+
+using std::cout; using std::cin;
+
 
 int main() 
 {
-	string first;
-	char desc;
-	int position;
+	std::string first;
+	char choice;
 	TicTacToeManager manager;
+	int game_choice;
+	GameType type;
+	TicTacToe* tic_tac_toe;
 
 	do 
 	{
-		int Choice;
-		TicTacToe* tic_tac_toe;
+		cout << "Tic tac toe 3 or 4: ";
+		cin >> game_choice;
 
-		cout << "Enter 3 to play tic_tac_toe_3 or 4 to play tic_tac_toe_4: ";
-		cin >> Choice;
-		if (Choice == 3)
+		if (game_choice == three)
 		{
 			tic_tac_toe = new TicTacToe3();
 		}
-		else if (Choice == 4)
+		else 
 		{
 			tic_tac_toe = new TicTacToe4();
 		}
+
 		cout << "First player: ";
 		cin >> first;
 		tic_tac_toe->start_game(first);
@@ -40,16 +41,16 @@ int main()
 			cout << "\n\n";
 		}
 
-		cout<< "Winner is " << tic_tac_toe->get_winner();
+		cout<<"Winner: " << tic_tac_toe->get_winner();
 
 		manager.save_game(*tic_tac_toe);
 
-		cout << "Press y to play again: ";
-		cin >> desc;
+		cout << "play again";
+		cin >> choice;
 
-	} while (desc == 'y');
+	} while (choice == 'y');
 
 	cout<<manager;
 
 	return 0;
-}}
+}
