@@ -47,13 +47,13 @@ wxBoxSizer * Panel::get_box_sizer()
 	vbox1->Add(trans_type_radio, 0);
 
 	auto amount_label = new wxStaticText(this, wxID_ANY, wxT("Amount: "), wxDefaultPosition, wxSize(70, -1));
-		vbox1->Add(transaction_text, 0);
+	vbox1->Add(amount_label, 0);
 
-		transaction_text = new wxTextCtrl(this, wxID_ANY);
-		vbox1->Add(transaction_text, 0);
+	transaction_text = new wxTextCtrl(this, wxID_ANY);
+	vbox1->Add(transaction_text, 0);
 
-		submit_button = new wxButton(this, -1, wxT("Submit"));
-		submit_button->Bind(wxEVT_BUTTON, &Panel::on_submit_button_click, this);
+	submit_button = new wxButton(this, -1, wxT("Submit"));
+	submit_button->Bind(wxEVT_BUTTON, &Panel::on_submit_button_click, this);
 		vbox1->Add(submit_button);
 	return vbox1;
 }
