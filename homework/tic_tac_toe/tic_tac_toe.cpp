@@ -72,6 +72,11 @@ std::string TicTacToe::get_winner() const
 	return winner;
 }
 
+const std::vector<std::string>& TicTacToe::get_pegs()
+{
+	return pegs;
+}
+
 
 void TicTacToe::set_winner() 
 {
