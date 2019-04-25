@@ -4,7 +4,10 @@
 
 int main() 
 {
-	int number = 10;
+	int* hold_return_value;
+	int num = 5;
+	hold_return_value = return_pointer(num);
+	/*int number = 10;
 	int*numberPtr = &number;
 
 	ref(number, numberPtr);
@@ -20,4 +23,5 @@ int main()
 
 	
 	return 0;
+	*/
 }
